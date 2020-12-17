@@ -1,0 +1,10 @@
+<h1><%= @camper.name %></h1>
+<h3>Age: <%= @camper.age %></h3>
+<h3>Activities: </h3>
+<ul>
+<% @camper.activities.each do |a| %>
+<li><%= a.name %> , Difficulty @ <%= a.difficulty %></li>
+<% end %>
+</ul>
+
+<%= button_to "Back to Campers", campers_path, method: :get %>
